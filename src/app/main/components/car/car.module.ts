@@ -8,6 +8,8 @@ import { CarmodalComponent } from './carmodal/carmodal.component';
 import { CarvarientComponent } from './carvarient/carvarient.component';
 import { CarfueltypeComponent } from './carfueltype/carfueltype.component';
 import { CarpaymentdetailsComponent } from './carpaymentdetails/carpaymentdetails.component';
+import { CarbrandsComponent } from './carbrands/carbrands.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,14 +19,20 @@ import { CarpaymentdetailsComponent } from './carpaymentdetails/carpaymentdetail
     CarmodalComponent,
     CarvarientComponent,
     CarfueltypeComponent,
-    CarpaymentdetailsComponent
+    CarpaymentdetailsComponent,
+    CarbrandsComponent
   ],
   imports: [
     CommonModule,
-    CarRoutingModule
+    CarRoutingModule,
+    FormsModule
   ],
   exports:[
     CarComponent
+  ],
+
+  providers:[
+    CarbrandsComponent
   ]
 })
 export class CarModule { }

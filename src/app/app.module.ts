@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarModule } from './main/components/car/car.module';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    CarModule
+    CarModule,
+    HttpClientModule
     
   ],
   providers: [],
