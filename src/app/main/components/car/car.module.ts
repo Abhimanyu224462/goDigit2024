@@ -22,6 +22,9 @@ import { CarpaymentdetailsComponent } from './carpaymentdetails/carpaymentdetail
   imports: [
     CommonModule,
     CarRoutingModule
+  ],
+  exports:[
+    CarComponent
   ]
 })
 export class CarModule { }

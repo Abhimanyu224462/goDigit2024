@@ -5,6 +5,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarModule } from '../main/components/car/car.module';
+import { AppRoutingModule } from '../app-routing.module';
 
 
 
@@ -17,7 +19,9 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CarModule,
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,

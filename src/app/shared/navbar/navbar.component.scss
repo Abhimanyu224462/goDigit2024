@@ -1,6 +1,6 @@
 #iconimg{
 cursor:pointer;
-// transition: transform 0.3s;
+transition: transform 0.5s;
 border: 2px solid white;
 // border-color: rgb(248, 169, 12);
 border-radius: 100px;
@@ -8,11 +8,12 @@ border-radius: 100px;
 
 #iconimg:hover{
     color: rgb(185, 181, 181);
-    // transform: scale(1.2);
+    transform: scale(1.1);
     border: 2px solid;
     border-color: rgb(248, 169, 12);
     border-radius: 100px;
     box-shadow: 1px 1px 10px 1px;
+    
 }
 
 a{
