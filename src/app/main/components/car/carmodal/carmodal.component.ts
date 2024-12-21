@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpService } from 'src/app/service/http.service';
-import { CarbrandsComponent } from '../carbrands/carbrands.component';
+import { DbserviceService } from 'src/app/service/dbservice.service';
 
 @Component({
   selector: 'app-carmodal',
@@ -8,24 +8,43 @@ import { CarbrandsComponent } from '../carbrands/carbrands.component';
   styleUrls: ['./carmodal.component.scss']
 })
 export class CarmodalComponent {
-  constructor(private http:HttpService, private carbrand:CarbrandsComponent){}
+  carValueRec: any;
+  brandselectedSub: any;
+  showtable:boolean = true;
+  constructor(private http:HttpService, private dbservice:DbserviceService){
+  
+  }
 modalsData!:any
 
-brandselectedfn(){
-  this.brandselected = this.carbrand.sendbranddata
-  console.log(this.brandselected)
+
+
+
+
+brandselectedfn1(){
+  this.carValueRec = this.dbservice.sendcarValue()
+  console.log("value in car model recieved from service", this.carValueRec)
+
+  for (let item of this.carValueRec){
+this.brandselected = item[0]
+console.log("final value", this.brandselected)
+  }
+  this.getData()
 }
 
 //Service use karna hai
+ngOnInit() {
+  this.dbservice.subject$.subscribe(() => this.brandselectedfn1())
 
-
-
-
-brandselected:string = "0"
-
-ngOnInit(){
-  this.getData()
+  if(this.modalsData == ""){
+    this.showtable=true
+  }
 }
+
+
+
+brandselected:any
+
+
 
   getData(){
 this.http.getDataFromServer('brands').subscribe({

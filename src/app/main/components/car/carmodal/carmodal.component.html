@@ -1,10 +1,11 @@
-<p>carmodal works!</p>
 
-<select name="" id="" [(ngModel)] = "brandselected">
-    <option value="0">tata</option>
-    <option value="1">audi</option>
-    <option value="2">maruti</option>
-    <option value="3">kia</option>
-</select>
-
-<button (click)="getData()">submit</button>
+<div class="container">
+    <table class="table table-light ">
+        <tbody>
+            <!-- <h5 *ngIf="showtable">Please Select Car Model</h5> -->
+            <tr class="bg-white" *ngFor="let item of modalsData; let i = index">
+                <td><span style="font-weight: 600;">{{item.concat}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

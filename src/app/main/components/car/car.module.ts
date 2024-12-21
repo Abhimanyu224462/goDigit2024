@@ -29,10 +29,6 @@ import { FormsModule } from '@angular/forms';
   ],
   exports:[
     CarComponent
-  ],
-
-  providers:[
-    CarbrandsComponent
   ]
 })
 export class CarModule { }

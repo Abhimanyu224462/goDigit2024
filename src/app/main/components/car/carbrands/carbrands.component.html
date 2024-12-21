@@ -1,10 +1,12 @@
-<p>carbrands works!</p>
-
-<select name="" id="" [(ngModel)] = "brandselectedinbrand">
-    <option value="0">tata</option>
-    <option value="1">audi</option>
-    <option value="2">maruti</option>
-    <option value="3">kia</option>
-</select>
-
-<button (click)="selectedDatainBrand()">submit</button>
+<div class="container">
+    <table class="table table-light ">
+        <tbody>
+            <tr class="bg-white" *ngFor="let item of brandsData; let i = index" (click)="selectedDatainBrand(i)"
+                (click)="nameforpatch(item.brandName)" (click)="triggerfnatbrand()">
+                <td><img [src]="item.logo" alt="" class="me-5" style="width: 50px; height: 50px; object-fit: cover;">
+                    <span style="font-weight: 600;">{{item.brandName}}</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

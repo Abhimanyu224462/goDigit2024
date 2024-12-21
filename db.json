@@ -2,6 +2,7 @@
     "brands": [
         {
             "brandName": "TATA",
+            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tata_logo.svg/1116px-Tata_logo.svg.png",
             "models": [
                 {
                     "concat": "TATA ALTROZ",
@@ -88,6 +89,7 @@
         },
         {
             "brandName": "AUDI",
+            "logo": "https://w7.pngwing.com/pngs/575/243/png-transparent-2015-audi-a6-car-logo-desktop-audi-text-trademark-audi-thumbnail.png",
             "models": [
                 {
                     "concat": "AUDI A3",
@@ -146,7 +148,8 @@
             ]
         },
         {
-            "brandName": "Maruti",
+            "brandName": "MARUTI",
+            "logo": "https://e7.pngegg.com/pngimages/444/145/png-clipart-suzuki-swift-car-motorcycle-honda-logo-suzuki-angle-emblem.png",
             "models": [
                 {
                     "concat": "MARUTI SUZUKI 800",
@@ -278,6 +281,7 @@
         },
         {
             "brandName": "KIA",
+            "logo": "https://w7.pngwing.com/pngs/292/386/png-transparent-kia-logo-new-brand-logos-brands-in-colors-icon.png",
             "models": [
                 {
                     "concat": "KIA CARENS",

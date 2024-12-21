@@ -1,0 +1,17 @@
+tr{
+    cursor:pointer;
+    // transition: transform 0.5s;
+// border: 2px solid white;
+// border-color: rgb(248, 169, 12);
+// border-radius: 100px;
+}
+
+tr:hover{
+    // color: rgb(185, 181, 181);
+    // transform: scale(1.1);
+    border: 2px solid  rgb(248, 169, 12);
+    // border-color: rgb(248, 169, 12);
+    // border-radius: 50px;
+    // box-shadow: 1px 1px 10px 1px;
+    background-color: white;
+}

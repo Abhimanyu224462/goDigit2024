@@ -1,32 +1,35 @@
 <div class="mt-5 container border shadow w-75 bg-white">
+
   <h6 class="mt-2"><i class="bi bi-car-front mx-2"></i>Enter Your Car details</h6>
 
-<div class="container  d-flex">
-  
-  <div class="col-md-8 container-fluid border-end">
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Select your Brand</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Select Brand" data-bs-toggle="modal" data-bs-target="#exampleModal">     
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Select your Model</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Select Model"data-bs-toggle="modal" data-bs-target="#exampleModalModel">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-  </div>
+  <div class="container  d-flex">
 
-  <div class="col-md-4 mt-5 pt-5">
-<img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/img/lady-standing-beside-new-car%201.svg" alt="">
-  </div>
+    <div class="col-md-8 container-fluid border-end">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Select your Brand</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" (ngModelChange)="patchbrandname()"
+          [placeholder]="SelectBrand" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Select your Model</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Select Model"
+          data-bs-toggle="modal" data-bs-target="#exampleModalModel" (ngModelChange)="triggerfnatcarreg()">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+    </div>
 
-</div>
+    <div class="col-md-4 mt-5 pt-5">
+      <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/img/lady-standing-beside-new-car%201.svg" alt="">
+    </div>
+
+  </div>
 </div>
 
 <div>
-  
+
 </div>
 
 <!-- Car Brand modal -->
@@ -39,17 +42,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <app-carbrands></app-carbrands>
+        <app-carbrands data-bs-dismiss="modal"></app-carbrands>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>
 </div>
 
-<!-- Car Modal Modal -->
+<!-- Car Model Modal -->
 
 <div class="modal fade" id="exampleModalModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -62,8 +65,8 @@
         <app-carmodal></app-carmodal>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
   </div>
