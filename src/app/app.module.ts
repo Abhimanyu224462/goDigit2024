@@ -7,12 +7,14 @@ import { SharedModule } from './shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarModule } from './main/components/car/car.module';
 import { HomeComponent } from './home/home.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { PaymentComponent } from './payment/payment.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    PaymentComponent,
     
   ],
   imports: [
