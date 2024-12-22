@@ -5,11 +5,13 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DbserviceService {
+  varientname: any;
 
   constructor() { }
 
   //DECLARATION
   carname: any;
+  modelname: any
   private carValue: any = []
 
   //TO SEND THE VALUE OF CAR AS INDEX FROM CAR BRAND COMP TO CAR MODEL COMPO
@@ -42,4 +44,35 @@ export class DbserviceService {
     this.subject1$.next()
   }
 
+  //TO SEND THE NAME OF THE CAR MODE SELECTED AT THE CAR MODEL COMPO
+
+  savemodelname(modelname:any){
+this.modelname = modelname
+  }
+
+  sendmodelname(){
+    return this.modelname
+  }
+
+  //SUBJECT TO AUTO TRIGGER FUNCTION AVAILABLE IN CAR-RE COMP FOR CAR MODEL
+
+  subject2$ = new Subject<void>()
+  triggermodelfn(){
+    this.subject2$.next()
+  }
+
+
+  savevarientname(varientname:any){
+    this.varientname = varientname
+  }
+
+  sendvarientname(){
+    return this.varientname
+  }
+
+
+  subject3$ = new Subject<void>()
+  triggervarientfn(){
+    this.subject3$.next()
+  }
 }

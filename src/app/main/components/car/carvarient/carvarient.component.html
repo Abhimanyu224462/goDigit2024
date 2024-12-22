@@ -1,1 +1,25 @@
-<p>carvarient works!</p>
+
+<div class="container">
+    <div class="mb-2 mt-1"><i class="bi bi-fuel-pump btn-success-outline" ></i>
+        <select class="form-select" aria-label="Default select example" 
+            [(ngModel)]="fuelSelected" (ngModelChange)="fuelfilter($event)" >
+        <!-- <option selected> Select Fuel</option> -->
+        <option value="Diesel"><span>Diesel</span></option>
+        <option value="Petrol"><span>Petro</span>l</option>
+        <option value="Electric"><span>Electric</span></option>
+      </select>
+    </div>
+    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+    <table class="table table-light ">
+        <tbody>
+            
+            <tr class="bg-white" *ngFor="let item of carVariant; let i = index"
+                 (click)="sendvarientnamefn()" (click)="savevarientforpatch(item.new_variant)">
+                <td><span style="font-weight: 600;">{{item.new_variant}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+<!-- {{item['Fuel Type']}} -->

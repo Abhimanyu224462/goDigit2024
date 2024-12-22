@@ -4,7 +4,8 @@
         <tbody>
             <!-- <h5 *ngIf="showtable">Please Select Car Model</h5> -->
             <tr class="bg-white" *ngFor="let item of modalsData; let i = index">
-                <td><span style="font-weight: 600;">{{item.concat}}</span></td>
+                <td><span style="font-weight: 600;" 
+                    (click)="savemodelnameforpatch(item.concat)" (click)="sendmodelnamefn()">{{item.concat}}</span></td>
             </tr>
         </tbody>
     </table>

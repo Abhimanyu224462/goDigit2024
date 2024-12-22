@@ -12,14 +12,24 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Select your Model</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Select Model"
+        <input type="email" class="form-control" id="exampleFormControlInput1" [placeholder]="modelnameatcarreg"
           data-bs-toggle="modal" data-bs-target="#exampleModalModel" (ngModelChange)="triggerfnatcarreg()">
       </div>
       <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <label for="exampleFormControlInput1" class="form-label">Select Varient</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" [placeholder]="varientnameatcarreg"
+        data-bs-toggle="modal" data-bs-target="#exampleVarientModal">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Select Reg City</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Registered City">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Select Date</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Select Date">
       </div>
     </div>
+    
 
     <div class="col-md-4 mt-5 pt-5">
       <img src="https://d2h44aw7l5xdvz.cloudfront.net/assets/img/lady-standing-beside-new-car%201.svg" alt="">
@@ -62,7 +72,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <app-carmodal></app-carmodal>
+        <app-carmodal data-bs-dismiss="modal"></app-carmodal>
       </div>
       <div class="modal-footer">
         <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -71,3 +81,25 @@
     </div>
   </div>
 </div>
+
+<!-- Car Varient Model -->
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal fade" id="exampleVarientModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Select Varient</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-carvarient></app-carvarient>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
