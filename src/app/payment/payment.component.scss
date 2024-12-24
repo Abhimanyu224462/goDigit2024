@@ -5,21 +5,43 @@ input::placeholder {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  /* Unchecked state - Orange border with white background */
+  //CHECKBOX
 .custom-checkbox {
   border: 2px solid orange;
   background-color: white;
-  width: 1.50rem; /* Adjust size as needed */
-  height: 1.50rem; /* Adjust size as needed */
+  width: 1.50rem; 
+  height: 1.50rem; 
 }
 
-/* Checked state - Orange background */
 .custom-checkbox:checked {
   background-color: orange;
   border-color: orange;
 }
 
-/* Optional: Adjust appearance on focus */
 .custom-checkbox:focus {
-  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Optional orange glow */
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); 
+}
+
+
+//FOR RANGE
+
+input[type="range"].form-range::-webkit-slider-thumb {
+ 
+  width: 25px; 
+  height: 15px; 
+  border-radius: 50px; 
+  background: #ffa500; 
+  border: 1px solid #0e0e0e; 
+  cursor: grab;
+ 
+}
+
+input[type="range"].form-range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px; 
+  background:white; 
+  background: linear-gradient(to left, rgb(95, 176, 95) 50%, white 50%);
+  border: 2px solid rgb(214, 211, 211);
+  border-radius: 10px; 
+  cursor: pointer;
 }
