@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
+
   
 collectunltd(data: number) {
 
@@ -76,41 +77,65 @@ thirdpartycheck:any
 
 
 comprecheckvalue() {
+  this.x = this.compvalue
   console.log("comprehensive check value", this.comprehensivecheck);
   }
 
   thirdpartycheckvalue(){
+    this.y = 215
 console.log("third party check value", this.thirdpartycheck)
   }
 
-rangeidvcngCollect(){
-  console.log("idv range", this.rangeidv)
-  console.log("cng range", this.rangecng)
+rangeidvCollect(){
+this.z = (this.rangeidv * 320)/98000
+  console.log("idv range", this.rangeidv, "and value of z",this.z)
+  
+}
+
+rangecngCollect(){
+  this.b1 = (this.rangecng * 1.6)/10000
+  console.log("cng range", this.rangecng,"and value of b is",this.b)
 }
 
 pacoverfn() {
+  this.e = 8
   this.pacover = 8
   }
   pacover: any;
   
   breakassisfn() {
+    this.d = 9
   this.breakassis = 9
   }
   breakassis: any;
 
   passcoverfn() {
+    this.c = 21
   this.passcover = 21
   }
   passcover: any;
 
   cngfn() {
-  this.cng = this.rangecng
+  if(this.cng){
+    this.b = this.b1
+  }
   }
   cng: any;
 
   peraccifn() {
+    this.a = 21
  this.personaccid = 21
   }
   personaccid: any;
+
+
+  //final value
+
+  x:number = 0; y:number = 0; z:number = 0; a:number = 0; b1:number = 0; b:number = 0; c:number = 0; d:number = 0; e:number = 0 ; finalvalue:number = 0
+  
+  final() {
+    this.finalvalue = (this.x+this.y+this.z+this.a+this.b+this.c+this.d+this.e) * 12
+    }
+
 
 }
